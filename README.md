@@ -73,9 +73,86 @@ them missed, one test to run in the next two weeks, and up to 4 questions for yo
 - **Run the test before you trust the verdict.** It's seven opinions, not market research. No advisor knows your
   customers better than your customers do.
 
-## No Claude Code?
-Paste the skill into a chat and ask for each advisor's answer in a **new chat**, so none sees the others. Then paste
-all seven answers into one chat and ask for rounds 2 and 3. It's slower and less independent, but it works.
+## No Claude Code? Run the council in a normal chat
+Works in ChatGPT or the Claude app. About 15 minutes: nine chats in three rounds (seven advisors, one reviewer, one
+chair). Slower than Claude Code, and you do the shuffling by hand, but it works anywhere.
+
+![The council in a normal chat: seven advisor chats, one review chat, one chair chat](images/chat-overview.png)
+
+### Before you start
+- **Write your idea in 3–5 lines:** what it is, who it's for, your budget and time, and what success looks like.
+  You'll paste the same lines into every chat.
+- **Keep the chats apart.** If memory is on, a new chat can still draw on your other chats. Use a temporary chat
+  (ChatGPT) or an incognito chat (Claude), or turn memory off while you do this, so no advisor sees another's answer.
+- **Keep a note open** to collect the answers as you go.
+
+### Round 1: seven advisors, seven new chats
+![Round 1: the same idea goes into seven separate chats, one role each](images/chat-round1.png)
+
+Open a new chat for each advisor and paste this, with `[ROLE]` swapped for one of the role lines below:
+```
+You're one of seven advisors judging an idea. Argue your own point of view hard; don't try to sound balanced; don't make up statistics. If you'd need data you don't have, say what data.
+
+Your role: [ROLE]
+
+The idea: [YOUR 3-5 LINES]
+
+Answer in exactly this shape:
+VERDICT: go | change it | don't
+WHY: up to 3 sentences
+TOP 3 RISKS: each with how likely it is and what it would cost
+THE ONE CHANGE I'D MAKE
+2 QUESTIONS ONLY THE OWNER CAN ANSWER
+```
+The seven role lines, one per chat:
+1. `The Customer: the person this is for. Would I actually use it, pay for it, or switch to it? What would I use instead today? What would make me trust it?`
+2. `The Investor: where does the money come from, how much, and how soon? What does it cost to get one customer or one result? What's the cheapest way to prove it?`
+3. `The Operator: who does the work, every week? How many hours? What breaks first when it gets busy? What has to stop to make room for it?`
+4. `The Marketer: can you explain it in one sentence a stranger understands? How will people find it? What makes it different from what they already see?`
+5. `Risk & Safety: what could go wrong for the owner or the users: private data, money, legal, reputation, security, depending on one platform or tool? For each risk, the simplest fix. Never a risk without a fix.`
+6. `The Contrarian: the strongest case against doing this at all. What's the simpler alternative that gets most of the benefit?`
+7. `The Outsider: no background in the field. What's confusing? What sounds like jargon? What would make you ignore it in 3 seconds?`
+
+Copy each answer into your note as it comes in.
+
+### Round 2: an anonymous review, one new chat
+![Rounds 2 and 3: answers lose their names and become A to G, go to a review chat, then to a chair chat](images/chat-rounds2-3.png)
+
+In your note, **delete the role names**, put the seven answers in a shuffled order and label them **A to G**. Then open
+one new chat and paste:
+```
+Here are seven anonymous answers about the same idea, labelled A to G. Review them as a group.
+
+The idea: [YOUR 3-5 LINES]
+
+[ANSWERS A TO G]
+
+Reply with:
+STRONGEST ARGUMENT: letter + why
+WEAKEST ARGUMENT: letter + why
+WHAT EVERYONE MISSED
+DOES THIS CHANGE THE OVERALL VERDICT? yes/no + one line
+```
+(The Claude Code version runs seven separate reviewers. By hand, one is enough.)
+
+### Round 3: the chair, one last new chat
+```
+You're the chair of an advisory council. Below are my idea, seven advisors' answers (A to G) and a review of them. Write, in plain words and in this order:
+1. Verdict in one line (go / go with changes / rethink) and the vote, e.g. 4 go, 2 change it, 1 don't.
+2. Where they agree: bullets.
+3. The real disagreements: each as two one-line sides.
+4. What everyone missed.
+5. One test to run in the next 2 weeks that would prove or kill the idea cheaply.
+6. Up to 4 questions only I can answer. Ask them one at a time and update the verdict if an answer changes it.
+
+The idea: [YOUR 3-5 LINES]
+
+The answers: [ANSWERS A TO G]
+
+The review: [THE ROUND 2 REPLY]
+```
+Answer the chair's questions, then **run the test before you trust the verdict**. It's seven opinions, not market
+research.
 
 ## Credit
 The method (separate answers, anonymous review, one chair's verdict) comes from Andrej Karpathy's
