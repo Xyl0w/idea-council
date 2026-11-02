@@ -28,6 +28,11 @@ see what the earlier ones said and drift towards agreeing. Separate helper agent
 
 ## Install (pick one)
 
+**Easiest: let Claude Code do it.** Paste this into Claude Code:
+```
+Install the idea-council skill from https://github.com/Xyl0w/idea-council for me. Read SKILL.md first and tell me in two lines what it does, then save it as ~/.claude/skills/idea-council/SKILL.md.
+```
+
 **1. Download the file** (no terminal needed)
 1. Open [`SKILL.md`](SKILL.md) and click the download button (↓, top right of the file).
 2. Put it in a folder called `idea-council` inside your skills folder:
